@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 5000
 // middleware
 app.use(express.json())
 app.use(cors({
-  origin: "https://react-frontend-psi-seven.vercel.app",
+  origin: ["https://react-frontend-psi-seven.vercel.app"],
+   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 // mongodb connection
