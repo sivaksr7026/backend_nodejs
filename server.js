@@ -11,10 +11,10 @@ const PORT = process.env.PORT || 5000
 
 // middleware
 app.use(express.json())
-app.use(cors({origin:["https://react-frontend-psi-seven.vercel.app"],
-              methods:["POST","GET","PUT","DELETE"],
-              credentials:true
-             }))
+app.use(cors({
+  origin: "https://react-frontend-psi-seven.vercel.app",
+  credentials: true
+}));
 // mongodb connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
